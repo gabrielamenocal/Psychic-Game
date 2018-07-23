@@ -1,0 +1,57 @@
+.instructions{
+    text-align: justify;
+    background-color: rgba(226, 206, 197, 0.589);
+    margin-bottom: 15px;
+    font-family: 'Merienda', cursive;
+    /* background-image: url("assets/images/letters.gif");  */
+
+}
+
+.picture{
+    margin-left: 260px;
+    /* border: solid blue 5px; */
+
+}
+
+#title {
+    font-family: 'Monoton', cursive;
+    background-image: url("../images/letters.gif"); 
+    background-repeat: repeat;
+   color: white;
+
+}
+
+a:hover{
+    color: aliceblue;
+    /* margin-left: 260px; */
+    
+}
+
+a{
+    font-family: 'Cormorant Garamond', serif;    
+    color: azure;
+}
+
+body{
+    /* background-image: url("../images/psychic1.jpg"), url("../images/psychic1.jpg"), url("../images/psychic1.jpg"), url("../images/psychic2.jpg"), url("../images/psychic2.jpg"), url("../images/psychic2.jpg"); 
+    background-position: top right, bottom right, center right, bottom left, right left, center left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 300px 200px, 300px 200px, 300px 200px, 200px, 200px, 200px;   */
+}
+
+ #game h2{
+        text-align: center;
+    }
+
+#score{
+    margin-bottom: 10px;
+}
+
+#userInput{
+    align-self: center;
+}
+
+#errorMessage{
+    color: red;
+    margin-bottom:15px; 
+}
