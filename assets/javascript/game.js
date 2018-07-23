@@ -3,9 +3,7 @@ var choices = ["a", "b", "c", "d","e", "f","g","h","i","j", "k", "l", "m","n","o
 var computerGuess= 0; userChoice = 0;  
 var userGuesses = [];
 var message; 
-var invalidInput;
-
-   
+var invalidInput;  
 
 
 function userinput(event)
@@ -16,6 +14,9 @@ function userinput(event)
 
  userChoice= document.getElementById("userInput").value;
  console.log(userChoice);
+
+ userChoice = userChoice.toLowerCase();
+ console.log(userChoice); 
 
  input = userChoice;
 
@@ -46,9 +47,11 @@ function userinput(event)
             document.querySelector("#times").innerHTML = html;
     
             userGuesses.push(input);
-    
+
+            endGame(event);   
     
         }
+
         else
         {    
             losses++;
@@ -75,10 +78,12 @@ function userinput(event)
             var html=
             userGuesses;
             document.querySelector("#letters").innerHTML = html;
-    
+            
+            endGame(event);   
+
            
         }
-    
+
     }
      
       else
@@ -98,49 +103,35 @@ function userinput(event)
             message.innerHTML ="<h3> That key you pressed is not a valid option. Please try again. </h1>" + err;
     
         }
-    
-        userGuesses.push(input);
-    
-        var html=
-        userGuesses;
-        document.querySelector("#letters").innerHTML = html;
-    
-    
+
+        endGame(event);              
      };
-
-
-if (tries<= maxtries)
-
-{
-
-}
-
-else{
-
-    if (wins >= losses)
-   {
-
-    var html=
-    "<h1> CONGRATULATIONS!!! YOU HAVE WON!!!!!!!! </h1>";
-    document.querySelector("#endGame").innerHTML = html;
-   }
- else
-  {
-    var html=
-    "<h1> BEST LUCK NEXT TIME!!!!!! YOU HAVE LOST!!!!!!!! </h1>";
-    document.querySelector("#endGame").innerHTML = html;
-
- }
-
-}
-    
-
-
-
 };
 
                   
-     
+ function endGame(event)
+ {
+    if (tries >= maxtries)
+    {
+        if (wins >= losses)
+       {
+        console.log("IF statement inside endGame function"); 
+
+         var html=
+         "<h1> CONGRATULATIONS!!! YOU HAVE WON!!!!!!!! </h1>";
+         document.querySelector("#endGame").innerHTML = html;
+       }
+        else
+       {
+         var html=
+        "<h1> BEST LUCK NEXT TIME!!!!!! YOU HAVE LOST!!!!!!!! </h1>";
+        document.querySelector("#endGame").innerHTML = html;
+        }
+    }
+     else{
+        console.log("ELSE statement inside endGame function"); 
+    };   
+ };  
 
 
 function restart (event)
