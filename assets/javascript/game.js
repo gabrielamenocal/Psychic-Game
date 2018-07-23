@@ -21,8 +21,7 @@ function userinput(event)
 
  console.log(input);
 
- while(tries<=maxtries)
- {
+
     if (choices.includes(input)) 
     {
         if(input===computerGuess)
@@ -108,10 +107,17 @@ function userinput(event)
     
     
      };
-    
-    };
 
- if (wins >= losses)
+
+if (tries<= maxtries)
+
+{
+
+}
+
+else{
+
+    if (wins >= losses)
    {
 
     var html=
@@ -119,14 +125,19 @@ function userinput(event)
     document.querySelector("#endGame").innerHTML = html;
    }
  else
-   {
+  {
     var html=
     "<h1> BEST LUCK NEXT TIME!!!!!! YOU HAVE LOST!!!!!!!! </h1>";
     document.querySelector("#endGame").innerHTML = html;
 
-   }
+ }
 
- };
+}
+    
+
+
+
+};
 
                   
      
