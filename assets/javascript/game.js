@@ -120,12 +120,14 @@ function userinput(event)
          var html=
          "<h1> CONGRATULATIONS!!! YOU HAVE WON!!!!!!!! </h1>";
          document.querySelector("#endGame").innerHTML = html;
+         restart();
        }
         else
        {
          var html=
         "<h1> BEST LUCK NEXT TIME!!!!!! YOU HAVE LOST!!!!!!!! </h1>";
         document.querySelector("#endGame").innerHTML = html;
+        restart();
         }
     }
      else{
@@ -136,13 +138,5 @@ function userinput(event)
 
 function restart (event)
 {
-
-computerGuess = choices[Math.floor (Math.random() * choices.length)];
-console.log(computerGuess);
-
- var userChoice= document.getElementById("userInput").value;
- console.log(userChoice);     
-
- document.getElementById("userChoice").value ="";      
-
+    location.reload();
 };
