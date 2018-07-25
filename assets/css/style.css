@@ -92,3 +92,11 @@ header{
     text-align: center;
 }     
 
+.hide{
+    display: none;
+
+}
+
+#endGame h1{
+    text-align: center;
+}

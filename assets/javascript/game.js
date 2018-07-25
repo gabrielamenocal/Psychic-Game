@@ -117,17 +117,26 @@ function userinput(event)
        {
         console.log("IF statement inside endGame function"); 
 
+         var message="CONGRATULATIONS!!! YOU HAVE WON!!!!!!!! "
          var html=
-         "<h1> CONGRATULATIONS!!! YOU HAVE WON!!!!!!!! </h1>";
-         document.querySelector("#endGame").innerHTML = html;
-         restart();
+         `<h1> ${message} </h1>
+         <img src= "../images/winner.gif" class="img-fluid" alt="winner gif">`;
+          document.querySelector("#endGame").innerHTML = html;
+          setTimeout(function(){
+              restart();         
+           },4000);
        }
         else
        {
-         var html=
-        "<h1> BEST LUCK NEXT TIME!!!!!! YOU HAVE LOST!!!!!!!! </h1>";
+        
+        var message = "BEST LUCK NEXT TIME!!!!!! YOU HAVE LOST!!!!!!!!"
+        var html=
+       `<h1> ${message} </h1>
+       <img src= "../images/lost.gif" class="img-fluid" alt="lost gif">`;
         document.querySelector("#endGame").innerHTML = html;
-        restart();
+        setTimeout(function(){
+            restart();         
+         },4000);
         }
     }
      else{
